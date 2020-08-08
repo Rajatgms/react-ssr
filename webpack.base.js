@@ -12,7 +12,6 @@ module.exports = {
             ['env', { targets: { browser: ['last 2 versions'] } }]
           ]
         }
-
       }]
   }
 }

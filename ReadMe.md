@@ -27,3 +27,18 @@ Part 4: Add Navigation
     - Server side does not have URL access hence StaticRouter
     - Client side have URL access hence BrowserRouter
 - Update Express Routes Tier to allow all URL request to React Router Tier.
+
+Part 5: Redux and API integration
+- API Documentation - [documentation](https://react-ssr-api.herokuapp.com/)
+    - End Points - `/users, /admins, /auth_google, /logout, /current_user`
+- Redux - store, provider, thunk middleware
+- Add Store
+    - Client Redux setup - standard way
+    - Server Redux setup - store create in serverJS so that server HTML can be re-rendering
+      after async action fulfill.
+- Create Action and Reducer - Create Users action and reducer and attach to createStore for both.
+- Create UserList component with Redux connect.
+- Add route - `/users`
+- Add `import "babel-polyfill"` to support async await syntax.
+    
+     
