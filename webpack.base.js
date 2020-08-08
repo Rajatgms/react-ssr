@@ -1,4 +1,5 @@
 module.exports = {
+  mode: 'development',
   module: {
     rules: [
       {
@@ -7,11 +8,11 @@ module.exports = {
         loader: 'babel-loader',
         options: {
           'presets': [
-            'react',
-            'stage-0',
-            ['env', { targets: { browser: ['last 2 versions'] } }]
-          ]
-        }
-      }]
-  }
-}
+            '@babel/preset-env',
+            '@babel/preset-react',
+          ],
+          'plugins': ['@babel/transform-runtime'],
+        },
+      }],
+  },
+};

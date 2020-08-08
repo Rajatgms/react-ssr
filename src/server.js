@@ -1,4 +1,3 @@
-import 'babel-polyfill';
 import express from 'express';
 import React from 'react';
 import renderer from './helper/renderer';

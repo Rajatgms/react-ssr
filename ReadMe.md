@@ -39,6 +39,3 @@ Part 5: Redux and API integration
 - Create Action and Reducer - Create Users action and reducer and attach to createStore for both.
 - Create UserList component with Redux connect.
 - Add route - `/users`
-- Add `import "babel-polyfill"` to support async await syntax.
-    
-     
