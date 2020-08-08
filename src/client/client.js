@@ -1,3 +1,5 @@
-// client side application code
+import React from 'react';
+import ReactDOM from 'react-dom';
+import Home from './components/Home';
 
-console.log('Hi Client');
+ReactDOM.hydrate(<Home/>, document.getElementById('root'));

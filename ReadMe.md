@@ -11,3 +11,7 @@ Part 2:
 - Add re-build and restart run script task using nodemon and webpack watch.
 - Existing bundle will not able to provide event handle functionality at client side.
 - Add code to generate React App bundle and expose it as public static content.
+    - Add webpack to create client bundle.
+    - Expose client bundle as express static content.
+    - Update express response as HTML template with client bundle.
+- Client boot up - Use react hydrate to re-render static HTML to boot up HTML with react handlers. 
