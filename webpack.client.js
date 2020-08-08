@@ -1,11 +1,10 @@
-const path = require('path')
+const path = require('path');
 
 module.exports = {
-  target: 'node',
-  entry: './src/server.js',
+  entry: './src/client/client.js',
   output: {
     filename: 'bundle.js',
-    path: path.resolve(__dirname, 'build')
+    path: path.resolve(__dirname, 'public')
   },
   module: {
     rules: [
