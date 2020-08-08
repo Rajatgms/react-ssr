@@ -21,3 +21,9 @@ Part 3: Refactor webpack and scripts
 - use `npm-run-all` to run all dev scripts in parallel.
 - use `webpack-node-externals` to avoid bundling node_modules lib in server bundle. 
 - Modularize server content - file structure for server side react code.
+
+Part 4: Add Navigation
+- Use two set of Routing - StaticRouter and BrowserRouter
+    - Server side does not have URL access hence StaticRouter
+    - Client side have URL access hence BrowserRouter
+- Update Express Routes Tier to allow all URL request to React Router Tier.
