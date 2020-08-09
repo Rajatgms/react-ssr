@@ -75,5 +75,6 @@ Part 13: Style pages
 
 Part 14: Error Handling
 - Display `Not Found Page` for routes does not exist.
+- Use staticRouters context and respond with 404 in case `Not Found Page` rendered.
 
 
