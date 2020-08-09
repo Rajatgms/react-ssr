@@ -26,16 +26,22 @@ app.get('*', (req, res) => {
   const promises = matchRoutes(routesArray, req.path).map(routesItem => {
     const { route } = routesItem;
     return route.loadData ? route.loadData(store) : null;
+  }).map(promise => { // mark resolve individual promise
+    if (promise) {
+      return new Promise((resolve) => {
+        promise.then(resolve).catch(resolve);
+      });
+    }
   });
-  const render = () => {
+
+  Promise.all(promises).then(() => {
     const context = {};
     const content = renderer(req, store, context);
     if (context.notFound) {
       res.status(404);
     }
     res.send(content);
-  }
-  Promise.all(promises).then(render).catch(render);
+  });
 
 });
 app.listen('3000', () => {
