@@ -13,7 +13,7 @@ class UserList extends React.Component {
         Here's a big list of users:
         <ul>
           {
-            this.props.users.map(user => {
+            this.props.users && this.props.users.map(user => {
               return <li key={user.id}>{user.name}</li>;
             })
           }
@@ -23,7 +23,7 @@ class UserList extends React.Component {
   }
 };
 
-export const loadData = (store) => {
+const loadData = (store) => {
   return store.dispatch(fetchUsersAction());
 };
 
@@ -37,6 +37,7 @@ const mapDispatchToProps = (dispatch) => {
   };
 };
 
-const UserListContainer = connect(mapStateToProps, mapDispatchToProps)(UserList);
-
-export default UserListContainer;
+export default {
+  component: connect(mapStateToProps, mapDispatchToProps)(UserList),
+  loadData,
+};

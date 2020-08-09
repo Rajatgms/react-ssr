@@ -40,3 +40,8 @@ Part 6: Server side data loading.
     - use `renderRoutes` to create Routes component from `routes array`.
     - use `matchRoutes` to dispatch actions to fetch data before rendering application.
     - use `Promise.all` then render application.
+
+Part 7: Page component file structure - refactoring
+- Keep single use component as page component under `pages folder`.
+- Reusable component under `components folder`.
+- export `{component, loadData}` from page component.

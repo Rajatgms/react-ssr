@@ -1,18 +1,17 @@
 import React from 'react';
-import Home from './components/Home';
-import UserListContainer, { loadData } from './components/UsersList';
+import HomePage from './pages/HomePage';
+import UserListPage from './pages/UsersListPage';
 import { renderRoutes } from 'react-router-config';
 
 export const routesArray = [
   {
+    ...HomePage,
     path: '/',
-    component: Home,
     exact: true,
   },
   {
+    ...UserListPage,
     path: '/users',
-    component: UserListContainer,
-    loadData
   },
 ];
 
