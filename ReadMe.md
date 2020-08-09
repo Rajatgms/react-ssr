@@ -91,4 +91,5 @@ Part 17: Implement RequireAuth HOC
 - If user is authenticated - render AdminsListPage component
 - If user is not authenticated - redirect to '/' home page
 - `Redirect` from `react-router-dom` does not work at server side.
+- Use `staticRouter context` to do browser redirect.
 
