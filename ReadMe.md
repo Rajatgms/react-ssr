@@ -52,3 +52,8 @@ Part 8: Client side re-hydration
 Part 9: Mitigate XSS attacks
 - Use API - [XSS USERS API](https://react-ssr-api.herokuapp.com/users/xss).
 - Use `serialize-javascript` library to serialize state.
+
+Part 10: Server side authentication
+- JWT cannot use as during initial URL hit we do not have client side code to attach JWT token.
+- Use cookie based authentication.
+- Use proxy at render server for all api call from browser to handle cookie domain policy error.

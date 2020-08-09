@@ -1,11 +1,22 @@
 import express from 'express';
 import React from 'react';
+import { matchRoutes } from 'react-router-config';
+import proxy from 'express-http-proxy';
 import renderer from './helper/renderer';
 import createStore from './helper/createStore';
-import { matchRoutes } from 'react-router-config';
 import { routesArray } from './client/Routes';
 
 const app = express();
+
+// Setup proxy for API server
+app.use('/api', proxy('https://react-ssr-api.herokuapp.com', {
+    // required for API server
+    proxyReqOptDecorator: (opts) => {
+      opts.headers['x-forwarded-host'] = 'http://localhost:3000';
+      return opts;
+    },
+  },
+));
 
 // expose public folder as static content
 app.use(express.static('public'));
