@@ -4,6 +4,7 @@ import UserListPage from './pages/UsersListPage';
 import { renderRoutes } from 'react-router-config';
 import App from './App';
 import NotFoundPage from './pages/NotFoundPage';
+import AdminsListPage from './pages/AdminsListPage';
 
 export const routesArray = [
   {
@@ -17,6 +18,10 @@ export const routesArray = [
       {
         ...UserListPage,
         path: '/users',
+      },
+      {
+        ...AdminsListPage,
+        path: '/admins',
       },
       {
         ...NotFoundPage,

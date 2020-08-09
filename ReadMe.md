@@ -77,4 +77,7 @@ Part 14: Error Handling
 - Display `Not Found Page` for routes does not exist.
 - Use staticRouters context and respond with 404 in case `Not Found Page` rendered.
 
+Part 15: Admins Page
+- Create adminsListPage, action, reducer and routes considering user will be logged in.
+
 
