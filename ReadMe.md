@@ -93,3 +93,5 @@ Part 17: Implement RequireAuth HOC
 - `Redirect` from `react-router-dom` does not work at server side.
 - Use `staticRouter context` to do browser redirect.
 
+Part 18: React Helmet - to add dynamic title tag for SEO
+
