@@ -48,3 +48,7 @@ Part 7: Page component file structure - refactoring
 
 Part 8: Client side re-hydration
 - Dump server side redux store into client side store to avoid warning and blank screen.
+
+Part 9: Mitigate XSS attacks
+- Use API - [XSS USERS API](https://react-ssr-api.herokuapp.com/users/xss).
+- Use `serialize-javascript` library to serialize state.
