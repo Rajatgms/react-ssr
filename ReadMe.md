@@ -82,5 +82,7 @@ Part 15: Admins Page
 
 Part 16: Promises.all failure
 - It will hung browser screen.
-- Solution 1 - use `catch` and send `generic error message` - Not an elegant solution. 
+- Solution 1 - use `catch` and send `generic error message` - Not an elegant solution.
+- Solution 2 - use `catch` and render app without data - Not an elegant solution.
+
 
