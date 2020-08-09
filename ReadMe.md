@@ -95,3 +95,8 @@ Part 17: Implement RequireAuth HOC
 
 Part 18: React Helmet - to add dynamic title tag for SEO
 
+Part 19: renderToString vs renderToNodeStream
+- renderToNodeStream improve TTFB - Time to first byte
+- create stream pipe between browser and server
+- cons - Once pipe establish not possible to change status code or redirect app. 
+
