@@ -1,14 +1,24 @@
 import React from 'react';
-import { Route } from 'react-router-dom';
 import Home from './components/Home';
-import UserListContainer from './components/UsersList';
+import UserListContainer, { loadData } from './components/UsersList';
+import { renderRoutes } from 'react-router-config';
+
+export const routesArray = [
+  {
+    path: '/',
+    component: Home,
+    exact: true,
+  },
+  {
+    path: '/users',
+    component: UserListContainer,
+    loadData
+  },
+];
 
 const Routes = () => {
   return (
-    <div>
-      <Route exact path='/' component={Home}/>
-      <Route exact path='/users' component={UserListContainer}/>
-    </div>
+    <div>{renderRoutes(routesArray)}</div>
   );
 };
 

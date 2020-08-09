@@ -14,13 +14,17 @@ class UserList extends React.Component {
         <ul>
           {
             this.props.users.map(user => {
-              return <li key={user.id}>{user.name}</li>
+              return <li key={user.id}>{user.name}</li>;
             })
           }
         </ul>
       </div>
     );
   }
+};
+
+export const loadData = (store) => {
+  return store.dispatch(fetchUsersAction());
 };
 
 const mapStateToProps = (state) => {

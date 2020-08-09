@@ -28,14 +28,15 @@ Part 4: Add Navigation
     - Client side have URL access hence BrowserRouter
 - Update Express Routes Tier to allow all URL request to React Router Tier.
 
-Part 5: Redux and API integration
+Part 5: Integrate Redux and API
 - API Documentation - [documentation](https://react-ssr-api.herokuapp.com/)
     - End Points - `/users, /admins, /auth_google, /logout, /current_user`
-- Redux - store, provider, thunk middleware
-- Add Store
-    - Client Redux setup - standard way
-    - Server Redux setup - store create in serverJS so that server HTML can be re-rendering
-      after async action fulfill.
-- Create Action and Reducer - Create Users action and reducer and attach to createStore for both.
-- Create UserList component with Redux connect.
-- Add route - `/users`
+- Add Redux - store, provider, thunk middleware
+- Problems - Server side does not support lifecycle hence return initial rendered react code. 
+
+Part 6: Server side data loading.
+- use `react-router-config` library 
+    - convert Routes into `routes array`.
+    - use `renderRoutes` to create Routes component from `routes array`.
+    - use `matchRoutes` to dispatch actions to fetch data before rendering application.
+    - use `Promise.all` then render application.
