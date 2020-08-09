@@ -61,4 +61,6 @@ Part 10: Server side authentication
 Part 11: Axios instances
 - For client side API endpoint will be a proxy endpoint `/api`.
 - For server side API endpoint will be `API server endpoint`.
+    - Also configure client side cookie in server axios instance.
 - Use axios instances and thunk extra argument to configure setup.
+

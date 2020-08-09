@@ -22,7 +22,7 @@ app.use('/api', proxy('https://react-ssr-api.herokuapp.com', {
 app.use(express.static('public'));
 
 app.get('*', (req, res) => {
-  const store = createStore();
+  const store = createStore(req);
   const promises = matchRoutes(routesArray, req.path).map(routesItem => {
     const { route } = routesItem;
     return route.loadData ? route.loadData(store) : null;
