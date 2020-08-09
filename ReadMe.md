@@ -70,6 +70,10 @@ Part 12: Add App and Header Component
 - Create auth action and reducer and use `/current_user` api to check status.
 - Use `/auth/google` to login and `/logout` to logout.
 
-Part 13. Style pages
+Part 13: Style pages
 - use [materializecss](https://materializecss.com/getting-started.html)
+
+Part 14: Error Handling
+- Display `Not Found Page` for routes does not exist.
+
 
