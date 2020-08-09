@@ -57,3 +57,8 @@ Part 10: Server side authentication
 - JWT cannot use as during initial URL hit we do not have client side code to attach JWT token.
 - Use cookie based authentication.
 - Use proxy at render server for all api call from browser to handle cookie domain policy error.
+
+Part 11: Axios instances
+- For client side API endpoint will be a proxy endpoint `/api`.
+- For server side API endpoint will be `API server endpoint`.
+- Use axios instances and thunk extra argument to configure setup.
