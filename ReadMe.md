@@ -30,7 +30,7 @@ Part 4: Add Navigation
 
 Part 5: Integrate Redux and API
 - API Documentation - [documentation](https://react-ssr-api.herokuapp.com/)
-    - End Points - `/users, /admins, /auth_google, /logout, /current_user`
+    - End Points - `/users, /admins, /auth/google, /logout, /current_user, /users/xss`
 - Add Redux - store, provider, thunk middleware
 - Problems - Server side does not support lifecycle hence return initial rendered react code. 
 
@@ -63,4 +63,10 @@ Part 11: Axios instances
 - For server side API endpoint will be `API server endpoint`.
     - Also configure client side cookie in server axios instance.
 - Use axios instances and thunk extra argument to configure setup.
+
+Part 12: Add App and Header Component 
+- Create App component and nested routes under it.
+- Create Header component.
+- Create auth action and reducer and use `/current_user` api to check status.
+- Use `/auth/google` to login and `/logout` to logout.
 

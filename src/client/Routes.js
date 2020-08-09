@@ -2,16 +2,22 @@ import React from 'react';
 import HomePage from './pages/HomePage';
 import UserListPage from './pages/UsersListPage';
 import { renderRoutes } from 'react-router-config';
+import App from './App';
 
 export const routesArray = [
   {
-    ...HomePage,
-    path: '/',
-    exact: true,
-  },
-  {
-    ...UserListPage,
-    path: '/users',
+    ...App,
+    routes: [
+      {
+        ...HomePage,
+        path: '/',
+        exact: true,
+      },
+      {
+        ...UserListPage,
+        path: '/users',
+      },
+    ],
   },
 ];
 
