@@ -80,4 +80,7 @@ Part 14: Error Handling
 Part 15: Admins Page
 - Create adminsListPage, action, reducer and routes considering user will be logged in.
 
+Part 16: Promises.all failure
+- It will hung browser screen.
+- Solution 1 - use `catch` and send `generic error message` - Not an elegant solution. 
 
