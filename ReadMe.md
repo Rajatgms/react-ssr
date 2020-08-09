@@ -45,3 +45,6 @@ Part 7: Page component file structure - refactoring
 - Keep single use component as page component under `pages folder`.
 - Reusable component under `components folder`.
 - export `{component, loadData}` from page component.
+
+Part 8: Client side re-hydration
+- Dump server side redux store into client side store to avoid warning and blank screen.
