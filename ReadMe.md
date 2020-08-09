@@ -86,3 +86,9 @@ Part 16: Promises.all failure
 - Solution 2 - use `catch` and render app without data - Not an elegant solution.
 - Solution 3 - map each promise, wrap them around Promise and resolve them before promises.all call.
 
+Part 17: Implement RequireAuth HOC
+- Create withRequireAuth HOC which `check auth state`
+- If user is authenticated - render AdminsListPage component
+- If user is not authenticated - redirect to '/' home page
+- `Redirect` from `react-router-dom` does not work at server side.
+

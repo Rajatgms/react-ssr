@@ -1,6 +1,7 @@
 import React from 'react';
 import { connect } from 'react-redux';
 import { fetchAdminsAction } from '../actions/fetchAdminsAction';
+import withRequireAuth from '../components/hoc/RequireAuth';
 
 class AdminsListPage extends React.Component {
   componentDidMount () {
@@ -23,6 +24,8 @@ class AdminsListPage extends React.Component {
   }
 };
 
+const WrappedAdminsListPage = withRequireAuth(AdminsListPage);
+
 const loadData = (store) => {
   return store.dispatch(fetchAdminsAction());
 };
@@ -38,6 +41,6 @@ const mapDispatchToProps = (dispatch) => {
 };
 
 export default {
-  component: connect(mapStateToProps, mapDispatchToProps)(AdminsListPage),
+  component: connect(mapStateToProps, mapDispatchToProps)(WrappedAdminsListPage),
   loadData,
 };
