@@ -100,3 +100,19 @@ Part 19: renderToString vs renderToNodeStream
 - create stream pipe between browser and server
 - cons - Once pipe establish not possible to change status code or redirect app. 
 
+
+Summary
+- Two bundles - One for running Render Server and One for Client HTML ReactDOM hydrate.
+- Two Routes - Static Routes for Server and Browser Routes for Client.
+- Same Redux setup but for pre data loading, create server store in express route. 
+- Server side data loading by `react-routes-config`
+    - create routesArray - component, path, loadData.
+    - use `renderRoutes` to create Routes Component.
+    - use `matchRoutes` to call loadData and use `Promise.all` to render react application
+- Proxy to handle cookie domain policy
+    - Two axios instance - client with `/api` and server with `full API server endpoint`
+    - Use createStore, thunk extraArgument, to attach axios instance. 
+    - In action creator use 3rd parameter as axios instance for api call.
+- Create RequireAuth HOC and check auth state to load component or redirect to home.
+- Use StaticRoutes context to redirect user or to send 404 NotFound 
+    
